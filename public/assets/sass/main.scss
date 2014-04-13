@@ -1,0 +1,199 @@
+@import "compass/css3/images";
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+/*Fonts */
+.open-sans{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+/* Logo Animation */
+@keyframes logo-separator {
+    0%   {top: -140px; background: #fff;}
+    100% {top:-10px; background: #aaa;}
+}
+@-webkit-keyframes logo-separator {
+    0%   {top: -140px; background: #fff;}
+    100% {top:-10px; background: #aaa;}
+}
+@-moz-keyframes logo-separator {
+    0%   {top: -140px; background: #fff;}
+    100% {top:-10px; background: #aaa;}
+}
+
+@keyframes logo-name {
+    0%   {text-indent: -240px;}
+    100% {text-indent: 0;}
+}
+@-webkit-keyframes logo-name {
+    0%   {text-indent: -240px;}
+    100% {text-indent: 0;}
+}
+@-moz-keyframes logo-name {
+    0%   {text-indent: -240px;}
+    100% {text-indent: 0;}
+}
+
+@keyframes logo-symbol {
+    0% {
+        right: -80px;
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    100% {
+        right: 0px;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes logo-symbol {
+    0% {
+        right: -80px;
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    100% {
+        right: 0px;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+@-moz-keyframes logo-symbol {
+    0% {
+        right: -80px;
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    100% {
+        right: 0px;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes shake-email {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-25px);}
+    60% {-webkit-transform: translateY(-15px);}
+}
+@-moz-keyframes shake-email {
+    0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+    40% {-moz-transform: translateY(-25px);}
+    60% {-moz-transform: translateY(-15px);}
+}
+@-o-keyframes shake-email {
+    0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+    40% {-o-transform: translateY(-25px);}
+    60% {-o-transform: translateY(-15px);}
+}
+@keyframes shake-email {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-25px);}
+    60% {transform: translateY(-15px);}
+}
+
+.container{
+    width: 100%
+}
+.logo{
+    position: relative;
+    margin-top:50px; 
+    left: -50px;
+}
+.logo-symbol-wrap{
+    position: absolute;
+    padding-right: 20px;
+    right: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+.logo-symbol{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    right: -80px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-animation: logo-symbol 1.5s ease 0 forwards;
+            animation: logo-symbol 1.5s ease 0 forwards;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+}
+.logo-separator{
+    position: absolute;
+    left: 50%;  
+    width: 1px;
+    height: 80px;
+    display: inline-block;
+    -webkit-animation: logo-separator 1s ease 0 forwards;
+            animation: logo-separator 1s ease 0 forwards;
+}
+.logo-name{
+    position: absolute;
+    padding-left: 20px;
+    text-indent: -241px;
+    top: -10px;
+    left: 50%;
+    display: inline;
+    font-size: 30px;
+    overflow: hidden;
+    -webkit-animation: logo-name 1.5s ease 0 forwards;
+            animation: logo-name 1.5s ease 0 forwards;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+}
+.title-primary{
+    font-size: 60px;
+    padding-top: 130px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.email{
+    width: 50px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+.email:hover:after{
+    position: absolute;
+    content: 'Get in touch';
+    font-family: 'Open Sans';
+    color: #494949;
+    text-decoration: none;
+    font-size: 20px;
+    width: 150px;
+    left: -50px;
+    text-align: center;
+
+}
+.icon-envelope{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: url('../img/envelope.svg')0 -50px;
+    background-size: 50px 100px;
+    background-repeat: no-repeat;
+}
+.icon-envelope:hover{
+    background-position:0 0;
+    -webkit-animation: shake-email 1s;
+            animation: shake-email 1s;
+}
+
+
+.cf:before, .cf:after {content: " ";display: table;}
+.cf:after {clear: both;}
+
+
+@media only screen and (max-width: 467px) {
+    .logo-name{
+        top:-32px;
+    }
+    .title-primary{
+        padding-top: 99px;
+        margin-bottom: 30px;
+    }
+}
