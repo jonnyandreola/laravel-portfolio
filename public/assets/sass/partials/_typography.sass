@@ -1,0 +1,50 @@
+// FONT WEIGHTS
+@mixin font-light
+    font-weight: $font-light
+@mixin font-regular
+    font-weight: $font-regular
+@mixin font-bold
+    font-weight: $font-bold
+
+// FONT SIZES
+@mixin font-huge
+    font-size: $font-base * 4
+@mixin font-large($number: 3)
+    @if ($number < 7)
+        font-size: floor($font-base + ((7 - $number) * $increment))
+    @else
+        font-size: floor($font-base + $increment)
+@mixin font-small
+    font-size: floor($font-base * 0.75)
+
+// FONT FACE
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600)
+
+
+/* BASE */
+body
+    font-family: $primary-font
+    +font-light
+    color: $primary-text-colour
+    line-height: 1.5
+
+//Create headings font size
+@for $i from 1 through 6
+    h#{$i}
+        +font-large($i)
+
+
+small
+    +font-small
+
+strong, b
+    font-weight: $font-bold
+
+a
+    &:link, &:visited
+        color: $primary-text-colour
+    &:hover, &:active
+        background: $primary-colour
+        color: $secondary-text-colour
+        text-decoration: none
+

@@ -12,7 +12,24 @@
     <![endif]-->
 </head>
 <body class="{% block body_class%}{% endblock%}">
-    <header></header>
+    <header>
+        <div class="container">
+            <div class="logo-wrap">
+                <div class="logo">
+                    <img src="{{ img }}logo-symbol-white.svg" alt="My logo symbol"/>
+                    <h1>Jonny Andreola</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="/about">about</a></li>
+                        <li><a href="/work">work</a></li>
+                        <li><a href="/contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <main></main>
     <footer></footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
