@@ -5,8 +5,8 @@
 {% block body_class %}home{% endblock %}
 
 {% block content %}
-<section>
-	<div class="container intro">
+<section class="intro">
+	<div class="container">
 		<div class="intro-message">
 			<h2>
 				Hi, my name is <strong>Jonny</strong><br/>
@@ -14,7 +14,71 @@
 			</h2>
 			<small>not so much about Internet Explorer :(</small>
 		</div>
-		<img src="{{ img }}icon-intro.svg" alt="Symbol that represent a html tag"/>
+		<div class="intro-image">
+			<img src="{{ img }}icon-intro.svg" alt="Symbol that represent a html tag"/>
+		</div>
+	</div>
+</section>
+<section class="skills skill-html">
+	<div class="container">
+		<div class="logo-container">
+			<img src="{{ img }}html-logo.svg" alt="HTML5 Logo"/>
+		</div>
+		<div class="description">
+			<h3>Semantic HTML markup</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, voluptatum ut maxime sunt id voluptate vel laudantium cumque quam fugit delectus illo reiciendis ducimus. Officiis, molestiae repudiandae excepturi quisquam qui.</p>
+		</div>
+	</div>
+</section>
+<section class="skills skill-css">
+	<div class="container">
+		<div class="description">
+			<h3>Awesome CSS using SASS</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, fugiat, illum, rem corrupti deleniti quos officiis iste dicta placeat excepturi dolorum nemo necessitatibus eaque velit odio alias quam deserunt reprehenderit?</p>
+		</div>
+		<div class="logo-container">
+			<img src="{{ img }}sass-css-logos.svg" alt="SASS and CSS3 logos"/>
+		</div>
+	</div>
+</section>
+<section class="skills skill-jquery">
+	<div class="container">
+		<div class="logo-container">
+			<img src="{{ img }}jquery-logo.svg" alt="jQuery Logo">
+		</div>
+		<div class="description">
+			<h3>Make anything possible</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, et, dolor est perspiciatis minus eum sit veritatis numquam voluptatem voluptate eaque magnam saepe dolores fugiat debitis sint tempore sunt! In.</p>
+		</div>
+	</div>
+</section>
+<section class="skills skill-more">
+	<div class="cointainer">
+		<h3>Wait! There is more...</h3>
+		<div class="more-logos-container">
+			<div class="each-logo">
+				<img src="{{ img }}php-logo.svg" alt="PHP Logo">
+			</div>
+			<div class="each-logo">
+				<img src="{{ img }}mysql-logo.svg" alt="MySql Logo">
+			</div>
+			<div class="each-logo">
+				<img src="{{ img }}wordpress-logo.svg" alt="Wordpress Logo">
+			</div>
+			<div class="each-logo">
+				<img src="{{ img }}git-logo.svg" alt="Git Logo">
+			</div>
+			<div class="each-logo">
+				<img src="{{ img }}angular-logo.svg" alt="Angular JS Logo">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="skills skill-google">
+	<div class="container">
+		<h3>...and for everything else that I don't know (yet), I use</h3>
+		<img src="{{ img }}google-logo.svg" alt="Google Logo" class="logo-google"/>
+		<img class="search-box" src="{{ img }}google-search-box.svg" alt="Google Search box"/>
 	</div>
 </section>
 {% endblock %}

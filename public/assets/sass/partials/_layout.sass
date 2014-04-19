@@ -62,14 +62,90 @@ footer
             max-width: 200px
             margin-left: 10px
 
-.intro
-    display: table
-    img
+section.intro 
+    padding: 70px 0
+    .container
+        display: table
+    .intro-image
         display: table-cell
-        width: 70%
+        width: 30%
+        vertical-align: middle
         text-align: right
-        margin-left: 30%
-.intro-message
-    vertical-align: middle
-    display: table-cell
-    width: 70%
+        img
+            width: 65%
+
+    .intro-message
+        display: table-cell
+        vertical-align: middle
+        width: 70%
+
+.skills
+    padding: 100px 0
+    .container
+        display: table
+    .logo-container, .description
+        display: table-cell
+        width: 50%
+        vertical-align: middle
+    .logo-container
+        text-align: center
+        img
+            width: 200px
+            max-width: 100%
+    .description
+        p
+            max-width: 450px
+
+section.skill-html
+    background: $tertiary-colour
+
+section.skill-css
+    background: $primary-colour
+    color: $secondary-text-colour
+    .logo-container img
+        width: 80%
+
+
+section.skill-jquery
+    .logo-container img
+        width: 65%
+
+section.skill-more
+    padding: 30px 0 50px 0
+    background: $primary-colour
+    color: $secondary-text-colour
+    h3
+        text-align: center
+        margin-bottom: 80px
+    .more-logos-container
+        display: table
+        width: 100%
+    .each-logo
+        display: table-cell
+        width: 20%
+        vertical-align: middle
+        text-align: center
+        img 
+            width: 70%
+            max-height: 70px
+
+section.skill-google
+    background: $tertiary-colour
+    padding: 20px 0
+    h3
+        text-align: center
+        margin-bottom: 40px
+    img
+        display: block
+        width: 300px
+        max-width: 100%
+        margin: auto
+        margin-bottom: 20px
+    img.search-box
+        width: 700px
+        margin-bottom: 30px
+    
+
+
+
+

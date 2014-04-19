@@ -549,11 +549,16 @@ footer .contact-footer:hover, footer .contact-footer:active {
 }
 
 /* INTRO */
-/* line 87, ../sass/partials/_typography.sass */
+/* line 86, ../sass/partials/_typography.sass */
+.intro-message {
+  padding-bottom: 40px;
+}
+/* line 88, ../sass/partials/_typography.sass */
 .intro-message h2 {
   font-size: 49px;
+  margin-bottom: 0;
 }
-/* line 89, ../sass/partials/_typography.sass */
+/* line 91, ../sass/partials/_typography.sass */
 .intro-message h2 strong {
   font-weight: 400;
 }
@@ -660,20 +665,128 @@ footer .github-footer span {
 }
 
 /* line 65, ../sass/partials/_layout.sass */
-.intro {
-  display: table;
+section.intro {
+  padding: 70px 0;
 }
 /* line 67, ../sass/partials/_layout.sass */
-.intro img {
+section.intro .container {
+  display: table;
+}
+/* line 69, ../sass/partials/_layout.sass */
+section.intro .intro-image {
   display: table-cell;
-  width: 70%;
+  width: 30%;
+  vertical-align: middle;
   text-align: right;
-  margin-left: 30%;
+}
+/* line 74, ../sass/partials/_layout.sass */
+section.intro .intro-image img {
+  width: 65%;
+}
+/* line 77, ../sass/partials/_layout.sass */
+section.intro .intro-message {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
 }
 
-/* line 72, ../sass/partials/_layout.sass */
-.intro-message {
-  vertical-align: middle;
+/* line 82, ../sass/partials/_layout.sass */
+.skills {
+  padding: 100px 0;
+}
+/* line 84, ../sass/partials/_layout.sass */
+.skills .container {
+  display: table;
+}
+/* line 86, ../sass/partials/_layout.sass */
+.skills .logo-container, .skills .description {
   display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+}
+/* line 90, ../sass/partials/_layout.sass */
+.skills .logo-container {
+  text-align: center;
+}
+/* line 92, ../sass/partials/_layout.sass */
+.skills .logo-container img {
+  width: 200px;
+  max-width: 100%;
+}
+/* line 96, ../sass/partials/_layout.sass */
+.skills .description p {
+  max-width: 450px;
+}
+
+/* line 99, ../sass/partials/_layout.sass */
+section.skill-html {
+  background: #f4f2f4;
+}
+
+/* line 102, ../sass/partials/_layout.sass */
+section.skill-css {
+  background: #7e3f98;
+  color: white;
+}
+/* line 105, ../sass/partials/_layout.sass */
+section.skill-css .logo-container img {
+  width: 80%;
+}
+
+/* line 110, ../sass/partials/_layout.sass */
+section.skill-jquery .logo-container img {
+  width: 65%;
+}
+
+/* line 113, ../sass/partials/_layout.sass */
+section.skill-more {
+  padding: 30px 0 50px 0;
+  background: #7e3f98;
+  color: white;
+}
+/* line 117, ../sass/partials/_layout.sass */
+section.skill-more h3 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+/* line 120, ../sass/partials/_layout.sass */
+section.skill-more .more-logos-container {
+  display: table;
+  width: 100%;
+}
+/* line 123, ../sass/partials/_layout.sass */
+section.skill-more .each-logo {
+  display: table-cell;
+  width: 20%;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 128, ../sass/partials/_layout.sass */
+section.skill-more .each-logo img {
   width: 70%;
+  max-height: 70px;
+}
+
+/* line 132, ../sass/partials/_layout.sass */
+section.skill-google {
+  background: #f4f2f4;
+  padding: 20px 0;
+}
+/* line 135, ../sass/partials/_layout.sass */
+section.skill-google h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* line 138, ../sass/partials/_layout.sass */
+section.skill-google img {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+/* line 144, ../sass/partials/_layout.sass */
+section.skill-google img.search-box {
+  width: 700px;
+  margin-bottom: 30px;
 }
