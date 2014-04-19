@@ -8,7 +8,7 @@
 
 // FONT SIZES
 @mixin font-huge
-    font-size: $font-base * 4
+    font-size: floor($font-base * 3.5)
 @mixin font-large($number: 3)
     @if ($number < 7)
         font-size: floor($font-base + ((7 - $number) * $increment))
@@ -16,6 +16,12 @@
         font-size: floor($font-base + $increment)
 @mixin font-small
     font-size: floor($font-base * 0.75)
+
+@mixin negative-link
+    a:link, a:visited
+        color: $secondary-text-colour
+    a:hover, a:active
+        background: $secondary-colour
 
 // FONT FACE
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600)
@@ -64,3 +70,21 @@ header
 body.home
     a.home:link, a.home:visited
         background: $secondary-colour
+
+/* FOOTER */
+footer
+    +negative-link
+    .contact-footer
+        vertical-align: middle
+        text-decoration: none
+        &:hover, &:active
+            background: none
+            padding-left: 10px
+        +font-large
+
+/* INTRO */ 
+.intro-message
+    h2
+        +font-huge
+        strong
+            +font-regular

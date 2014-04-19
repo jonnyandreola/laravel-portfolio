@@ -437,7 +437,7 @@ th {
 /* WIDTHS */
 /* BreakPoints */
 /* BASE */
-/* line 25, ../sass/partials/_typography.sass */
+/* line 31, ../sass/partials/_typography.sass */
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -445,64 +445,64 @@ body {
   line-height: 1.5;
 }
 
-/* line 33, ../sass/partials/_typography.sass */
+/* line 39, ../sass/partials/_typography.sass */
 h1 {
   font-size: 35px;
   font-weight: 300;
 }
 
-/* line 33, ../sass/partials/_typography.sass */
+/* line 39, ../sass/partials/_typography.sass */
 h2 {
   font-size: 31px;
   font-weight: 300;
 }
 
-/* line 33, ../sass/partials/_typography.sass */
+/* line 39, ../sass/partials/_typography.sass */
 h3 {
   font-size: 28px;
   font-weight: 300;
 }
 
-/* line 33, ../sass/partials/_typography.sass */
+/* line 39, ../sass/partials/_typography.sass */
 h4 {
   font-size: 24px;
   font-weight: 300;
 }
 
-/* line 33, ../sass/partials/_typography.sass */
+/* line 39, ../sass/partials/_typography.sass */
 h5 {
   font-size: 21px;
   font-weight: 300;
 }
 
-/* line 33, ../sass/partials/_typography.sass */
+/* line 39, ../sass/partials/_typography.sass */
 h6 {
   font-size: 17px;
   font-weight: 300;
 }
 
-/* line 38, ../sass/partials/_typography.sass */
+/* line 44, ../sass/partials/_typography.sass */
 small {
   font-size: 10px;
 }
 
-/* line 41, ../sass/partials/_typography.sass */
+/* line 47, ../sass/partials/_typography.sass */
 strong, b {
   font-weight: 600;
 }
 
-/* line 44, ../sass/partials/_typography.sass */
+/* line 50, ../sass/partials/_typography.sass */
 a {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 46, ../sass/partials/_typography.sass */
+/* line 52, ../sass/partials/_typography.sass */
 a:link, a:visited {
   color: #313131;
 }
-/* line 48, ../sass/partials/_typography.sass */
+/* line 54, ../sass/partials/_typography.sass */
 a:hover, a:active {
   background: #4d2a80;
   color: white;
@@ -510,38 +510,69 @@ a:hover, a:active {
 }
 
 /* HEADER */
-/* line 56, ../sass/partials/_typography.sass */
+/* line 62, ../sass/partials/_typography.sass */
 header a, header a:link, header a:visited {
   text-decoration: none;
   color: white;
   padding: 40px 15px;
 }
-/* line 60, ../sass/partials/_typography.sass */
+/* line 66, ../sass/partials/_typography.sass */
 header a:hover, header a:active, header a:link:hover, header a:link:active, header a:visited:hover, header a:visited:active {
   background: #4d2a80;
 }
 
 /*MAIN NAV */
-/* line 65, ../sass/partials/_typography.sass */
+/* line 71, ../sass/partials/_typography.sass */
 body.home a.home:link, body.home a.home:visited {
   background: #4d2a80;
 }
 
-/* line 1, ../sass/partials/_colours.sass */
+/* FOOTER */
+/* line 21, ../sass/partials/_typography.sass */
+footer a:link, footer a:visited {
+  color: white;
+}
+/* line 23, ../sass/partials/_typography.sass */
+footer a:hover, footer a:active {
+  background: #4d2a80;
+}
+/* line 77, ../sass/partials/_typography.sass */
+footer .contact-footer {
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 28px;
+}
+/* line 80, ../sass/partials/_typography.sass */
+footer .contact-footer:hover, footer .contact-footer:active {
+  background: none;
+  padding-left: 10px;
+}
+
+/* INTRO */
+/* line 87, ../sass/partials/_typography.sass */
+.intro-message h2 {
+  font-size: 49px;
+}
+/* line 89, ../sass/partials/_typography.sass */
+.intro-message h2 strong {
+  font-weight: 400;
+}
+
+/* line 17, ../sass/partials/_layout.sass */
 header, footer {
   background: #7e3f98;
   color: white;
 }
 
 @media (min-width: 1200px) {
-  /* line 18, ../sass/partials/_layout.sass */
+  /* line 21, ../sass/partials/_layout.sass */
   .container {
     width: 1170px;
     margin: auto;
   }
 }
 @media (max-width: 1199px) {
-  /* line 18, ../sass/partials/_layout.sass */
+  /* line 21, ../sass/partials/_layout.sass */
   .container {
     width: -moz-calc(100% - 60px);
     width: -webkit-calc(100% - 60px);
@@ -550,7 +581,7 @@ header, footer {
   }
 }
 @media (max-width: 600px) {
-  /* line 18, ../sass/partials/_layout.sass */
+  /* line 21, ../sass/partials/_layout.sass */
   .container {
     width: 100%;
     width: -moz-calc(100% - 30px);
@@ -559,62 +590,90 @@ header, footer {
   }
 }
 
-/* line 21, ../sass/partials/_layout.sass */
+/* line 24, ../sass/partials/_layout.sass */
 header {
   padding: 20px 0;
   overflow: hidden;
 }
-/* line 24, ../sass/partials/_layout.sass */
+/* line 27, ../sass/partials/_layout.sass */
 header .container {
   display: table;
 }
-/* line 26, ../sass/partials/_layout.sass */
+/* line 29, ../sass/partials/_layout.sass */
 header .logo {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 29, ../sass/partials/_layout.sass */
+/* line 32, ../sass/partials/_layout.sass */
 header .logo img {
   margin-right: 15px;
 }
-/* line 31, ../sass/partials/_layout.sass */
+/* line 34, ../sass/partials/_layout.sass */
 header .logo img, header .logo h1 {
   display: inline;
   vertical-align: middle;
 }
-/* line 34, ../sass/partials/_layout.sass */
+/* line 37, ../sass/partials/_layout.sass */
 header nav {
   display: table-cell;
   vertical-align: middle;
   text-align: right;
 }
-/* line 38, ../sass/partials/_layout.sass */
+/* line 41, ../sass/partials/_layout.sass */
 header nav li {
   display: inline;
 }
 
-/* line 41, ../sass/partials/_layout.sass */
+/* line 44, ../sass/partials/_layout.sass */
 footer {
   padding: 20px 0;
 }
-/* line 43, ../sass/partials/_layout.sass */
+/* line 46, ../sass/partials/_layout.sass */
 footer .container {
   display: table;
 }
-/* line 45, ../sass/partials/_layout.sass */
+/* line 48, ../sass/partials/_layout.sass */
 footer .contact-footer {
   display: table-cell;
   width: 50%;
 }
-/* line 48, ../sass/partials/_layout.sass */
+/* line 51, ../sass/partials/_layout.sass */
+footer .contact-footer > * {
+  vertical-align: middle;
+}
+/* line 53, ../sass/partials/_layout.sass */
 footer .github-footer {
   text-align: right;
   width: 50%;
   display: table-cell;
 }
-/* line 52, ../sass/partials/_layout.sass */
+/* line 57, ../sass/partials/_layout.sass */
+footer .github-footer > * {
+  vertical-align: middle;
+}
+/* line 59, ../sass/partials/_layout.sass */
 footer .github-footer span {
   display: inline-block;
   text-align: left;
   max-width: 200px;
+  margin-left: 10px;
+}
+
+/* line 65, ../sass/partials/_layout.sass */
+.intro {
+  display: table;
+}
+/* line 67, ../sass/partials/_layout.sass */
+.intro img {
+  display: table-cell;
+  width: 70%;
+  text-align: right;
+  margin-left: 30%;
+}
+
+/* line 72, ../sass/partials/_layout.sass */
+.intro-message {
+  vertical-align: middle;
+  display: table-cell;
+  width: 70%;
 }

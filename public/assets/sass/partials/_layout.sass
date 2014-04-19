@@ -14,6 +14,9 @@
         width: 100%
         +calc(width, "100% - 30px")
 
+header, footer
+    background: $primary-colour
+    color: $secondary-text-colour
 
 .container
     +container
@@ -45,11 +48,28 @@ footer
     .contact-footer
         display: table-cell
         width: 50%
+        > *
+            vertical-align: middle
     .github-footer
         text-align: right
         width: 50%
         display: table-cell
+        > *
+            vertical-align: middle
         span
             display: inline-block
             text-align: left
             max-width: 200px
+            margin-left: 10px
+
+.intro
+    display: table
+    img
+        display: table-cell
+        width: 70%
+        text-align: right
+        margin-left: 30%
+.intro-message
+    vertical-align: middle
+    display: table-cell
+    width: 70%

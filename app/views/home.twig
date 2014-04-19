@@ -1,3 +1,20 @@
 {% extends 'base' %}
 
+{% block title %}Home{% endblock %}
+
 {% block body_class %}home{% endblock %}
+
+{% block content %}
+<section>
+	<div class="container intro">
+		<div class="intro-message">
+			<h2>
+				Hi, my name is <strong>Jonny</strong><br/>
+				I'm <strong>passionate</strong> about everything related to <strong>web design</strong>
+			</h2>
+			<small>not so much about Internet Explorer :(</small>
+		</div>
+		<img src="{{ img }}icon-intro.svg" alt="Symbol that represent a html tag"/>
+	</div>
+</section>
+{% endblock %}

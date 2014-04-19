@@ -1,0 +1,12 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<g>
+	<g>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#4E2B80" d="M41.574,6.963L25.733,49.5C38.924,49.11,49.5,38.299,49.5,25.009
+			C49.5,17.868,46.445,11.442,41.574,6.963z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#7F3F98" d="M38.917,4.841C34.964,2.106,30.171,0.5,25,0.5
+			C11.469,0.5,0.5,11.473,0.5,25.009c0,12.635,9.557,23.032,21.833,24.362L38.917,4.841z"/>
+	</g>
+	<path fill="#FFFFFF" d="M23.208,35.059L3.248,26.291v-2.037l19.959-9.952v3.096L6.966,25.106l16.242,6.814V35.059z"/>
+</g>
+</svg>
