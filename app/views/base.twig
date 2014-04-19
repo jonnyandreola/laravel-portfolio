@@ -21,16 +21,31 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/">home</a></li>
-                    <li><a href="/about">about</a></li>
-                    <li><a href="/work">work</a></li>
-                    <li><a href="/contact">contact</a></li>
+                    <li><a class="home" href="/">home</a></li>
+                    <li><a class="about" href="/about">about</a></li>
+                    <li><a class="work" href="/work">work</a></li>
+                    <li><a class="contact" href="/contact">contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        {% block content%}{% endblock %}
+    </main>
+    <footer>
+        <div class="container">
+            <a href="/contact" class="contact-footer">
+                <img src="{{ img }}icon-contact.svg" alt="Envelope Icon"/>
+                <span>Contact</span>
+            </a>
+            <div class="github-footer">
+                <img src="{{ img }}icon-github.svg" alt="Github logo"/>
+                <span>
+                    There is nothing nasty here to hide, you can check this source code at <a href="https://github.com/jonnyandreola/laravel-portfolio" target="_blank" rel="nofollow">Github</a>
+                </span>
+            </div>
+        </div>
+    </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ js }}jquery.min.js">\x3C/script>')</script>
     <script src="{{ js }}main.js"></script>

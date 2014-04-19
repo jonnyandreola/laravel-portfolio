@@ -3,9 +3,9 @@
 class PagesController extends BaseController
 {
 
-	public function temp()
+	public function home()
 	{
-		return View::make('temporary');
+		return View::make('home');
 	}
 
 }

@@ -20,20 +20,36 @@
 
 header
     padding: 20px 0
+    overflow: hidden
     .container
         display: table
-        .logo
-            display: table-cell
+    .logo
+        display: table-cell
+        vertical-align: middle
+        img
+            margin-right: 15px
+        img, h1
+            display: inline
             vertical-align: middle
-            img
-                margin-right: 15px
-            img, h1
-                display: inline
-                vertical-align: middle
     nav
         display: table-cell
         vertical-align: middle
         text-align: right
         li
             display: inline
-            padding: 40px 15px
+
+footer
+    padding: 20px 0
+    .container
+        display: table
+    .contact-footer
+        display: table-cell
+        width: 50%
+    .github-footer
+        text-align: right
+        width: 50%
+        display: table-cell
+        span
+            display: inline-block
+            text-align: left
+            max-width: 200px

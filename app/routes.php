@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/', 'PagesController@temp');
+Route::get('/', 'PagesController@home');
