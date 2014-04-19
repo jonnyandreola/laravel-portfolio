@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,23 +12,21 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body class="{% block body_class%}{% endblock%}">
+<body class="{% block body_class%}{% endblock%}" lang="en">
     <header>
         <div class="container">
-            <div class="logo-wrap">
-                <div class="logo">
-                    <img src="{{ img }}logo-symbol-white.svg" alt="My logo symbol"/>
-                    <h1>Jonny Andreola</h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="/">home</a></li>
-                        <li><a href="/about">about</a></li>
-                        <li><a href="/work">work</a></li>
-                        <li><a href="/contact">contact</a></li>
-                    </ul>
-                </nav>
+            <div class="logo">
+                <img src="{{ img }}logo-symbol-white.svg" alt="My logo symbol"/>
+                <h1>Jonny Andreola</h1>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/work">work</a></li>
+                    <li><a href="/contact">contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main></main>

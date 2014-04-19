@@ -32,6 +32,7 @@ body
 @for $i from 1 through 6
     h#{$i}
         +font-large($i)
+        +font-light
 
 
 small
@@ -41,10 +42,11 @@ strong, b
     font-weight: $font-bold
 
 a
+    +single-transition
     &:link, &:visited
         color: $primary-text-colour
     &:hover, &:active
-        background: $primary-colour
+        background: $secondary-colour
         color: $secondary-text-colour
         text-decoration: none
 
