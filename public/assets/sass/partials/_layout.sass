@@ -24,6 +24,8 @@ header, footer
 header
     padding: 20px 0
     overflow: hidden
+    @media #{$small-screen}
+        padding: 0
     .container
         display: table
     .logo
@@ -34,6 +36,12 @@ header
         img, h1
             display: inline
             vertical-align: middle
+        @media #{$small-screen}
+            h1
+                +font-large(4)
+            img
+                width: 30px
+                margin-right: 10px
     nav
         display: table-cell
         vertical-align: middle
@@ -43,6 +51,8 @@ header
 
 footer
     padding: 20px 0
+    @media #{$small-screen}
+        padding: 10px 0
     .container
         display: table
     .contact-footer
@@ -64,6 +74,8 @@ footer
 
 section.intro 
     padding: 70px 0
+    @media #{$small-screen}
+        padding: 20px 0
     .container
         display: table
     .intro-image
@@ -73,14 +85,21 @@ section.intro
         text-align: right
         img
             width: 65%
+        @media #{$small-screen}
+            display: none
+
 
     .intro-message
         display: table-cell
         vertical-align: middle
         width: 70%
+        @media #{$small-screen}
+            width: 100%
 
 .skills
     padding: 100px 0
+    @media #{$small-screen}
+        padding: 10px 0
     .container
         display: table
     .logo-container, .description
@@ -89,12 +108,16 @@ section.intro
         vertical-align: middle
     .logo-container
         text-align: center
+        @media #{$small-screen}
+            width: 35%
         img
             width: 200px
             max-width: 100%
     .description
         p
             max-width: 450px
+        @media #{$small-screen}
+            width: 65%
 
 section.skill-html
     background: $tertiary-colour
