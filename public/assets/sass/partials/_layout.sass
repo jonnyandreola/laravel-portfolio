@@ -11,8 +11,8 @@
         +calc(width, "100% - 60px")
         margin: 0 30px
     @media #{$small-screen}
-        width: 100%
         +calc(width, "100% - 30px")
+        margin: 0 15px
 
 header, footer
     background: $primary-colour
@@ -58,12 +58,16 @@ footer
     .contact-footer
         display: table-cell
         width: 50%
+        @media #{$small-screen}
+            width: 35%
         > *
             vertical-align: middle
     .github-footer
         text-align: right
         width: 50%
         display: table-cell
+        @media #{$small-screen}
+            width: 65%
         > *
             vertical-align: middle
         span
