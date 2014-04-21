@@ -8,4 +8,9 @@ class PagesController extends BaseController
 		return View::make('home');
 	}
 
+	public function about()
+	{
+		return View::make('about');
+	}
+
 }

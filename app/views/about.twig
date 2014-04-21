@@ -1,0 +1,53 @@
+{% extends 'base' %}
+
+{% block title %}About{% endblock %}
+
+{% block body_class %}about{% endblock %}
+
+{% block content %}
+<section class="intro">
+    <div class="container">
+        <div class="intro-message">
+            <h2>About me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, commodi harum porro reprehenderit facere perspiciatis cumque natus eaque. Non, maxime, quas incidunt doloribus veniam assumenda nulla magni porro dignissimos quaerat quia eligendi perferendis eveniet eius reiciendis expedita quasi molestias beatae consequuntur aspernatur architecto perspiciatis quidem distinctio explicabo sapiente neque debitis.</p>
+        </div>
+        <div class="intro-image">
+            <img src="{{ img }}about-picture.jpg" alt="Picture of myself underwater"/>
+        </div>
+    </div>
+    <div class="container">
+        <div class="picture-wall-container">
+            <div class="picture-wall">
+                <div class="each-picture snowboard">
+                    <img src="{{ img }}about-me-in-pictures-snowboard.jpg" alt="" data-title="Snowboard" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+                <div class="each-picture travel">
+                    <img src="{{ img }}about-me-in-pictures-travel.jpg" alt="" data-title="Travel" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+                <div class="each-picture skateboard">
+                    <img src="{{ img }}about-me-in-pictures-skateboard.jpg" alt="" data-title="Skateboard" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+                <div class="each-picture brazil">
+                    <img src="{{ img }}about-me-in-pictures-brazil.jpg" alt="" data-title="Brazil" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+                <div class="each-picture love">
+                    <img src="{{ img }}about-me-in-pictures-love.jpg" alt="" data-title="Love" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+                <div class="each-picture webdesign">
+                    <img src="{{ img }}about-me-in-pictures-webdesign.jpg" alt="" data-title="Web Design" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+                <div class="each-picture bike">
+                    <img src="{{ img }}about-me-in-pictures-bike.jpg" alt="" data-title="Bike" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+                <div class="each-picture cheese">
+                    <img src="{{ img }}about-me-in-pictures-cheese.jpg" alt="" data-title="Cheese" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+                <div class="each-picture toronto">
+                    <img src="{{ img }}about-me-in-pictures-toronto.jpg" alt="" data-title="Toronto" data-content="Lorem ipsum dolor sit amet."/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

@@ -24,8 +24,16 @@
         background: $secondary-colour
 
 // FONT FACE
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600)
+@import "partials/open-sans"
 
+//Colour on select
+::selection
+    color: $secondary-text-colour
+    background: $secondary-colour
+
+::-moz-selection
+    color: $secondary-text-colour
+    background: $secondary-colour
 
 /* BASE */
 body
@@ -49,12 +57,13 @@ strong, b
 
 a
     +single-transition
+    text-decoration: none
     &:link, &:visited
         color: $primary-text-colour
+        border-bottom: 1px #{$secondary-colour} dotted
     &:hover, &:active
         background: $secondary-colour
         color: $secondary-text-colour
-        text-decoration: none
 
 
 /* HEADER */
@@ -67,18 +76,25 @@ header
             padding: 20px 10px
         &:hover, &:active
             background: $secondary-colour
+            @media #{$x-small-screen}
+                background: none
+                text-decoration: underline
 
 /*MAIN NAV */
 body.home
     a.home:link, a.home:visited
         background: $secondary-colour
+        @media #{$x-small-screen}
+            background: none
+            text-decoration: underline
+
 
 /* FOOTER */
 footer
     +negative-link
     .contact-footer
         vertical-align: middle
-        text-decoration: none
+        border-bottom: none
         &:hover, &:active
             background: none
             padding-left: 10px
@@ -92,3 +108,5 @@ footer
         margin-bottom: 0
         strong
             +font-regular
+        @media #{$x-small-screen}
+            +font-large

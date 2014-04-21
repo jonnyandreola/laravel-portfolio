@@ -1,3 +1,4 @@
 <?php
 
-Route::get('/', 'PagesController@home');
+Route::resource('/', 'PagesController@home');
+Route::resource('/about', 'PagesController@about');
