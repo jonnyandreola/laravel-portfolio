@@ -36,10 +36,14 @@
     </main>
     <footer>
         <div class="container">
-            <a href="/contact" class="contact-footer">
-                <img src="{{ img }}icon-contact.svg" alt="Envelope Icon"/>
-                <span>Contact</span>
-            </a>
+            <div class="contact-footer">
+                <a href="mailto:jonnyandreola@gmail.com" title="jonnyandreola@gmail.com">
+                    <img src="{{ img }}icon-contact.svg" alt="Envelope Icon"/>
+                </a>
+                <a href="http://www.linkedin.com/in/jonnyandreola" target="_blank" title="www.linkedin.com/in/jonnyandreola">
+                    <img src="{{ img }}icon-linkedin.svg" alt="LinkedIn Logo"/>
+                </a>
+            </div>
             <div class="github-footer">
                 <img src="{{ img }}icon-github.svg" alt="Github logo"/>
                 <span>
@@ -50,6 +54,6 @@
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ js }}jquery.min.js">\x3C/script>')</script>
-    <script async src="{{ js }}main.js"></script>
+    <script src="{{ js }}main.js"></script>
 </body>
 </html>

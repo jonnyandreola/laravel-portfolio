@@ -56,14 +56,17 @@ strong, b
     font-weight: $font-bold
 
 a
-    +single-transition
     text-decoration: none
+    position: relative
+    bottom: 0
+    right: 0
     &:link, &:visited
         color: $primary-text-colour
         border-bottom: 1px #{$secondary-colour} dotted
     &:hover, &:active
         background: $secondary-colour
         color: $secondary-text-colour
+        padding: 3px
 
 
 /* HEADER */
@@ -111,12 +114,11 @@ body
 /* FOOTER */
 body > footer
     +negative-link
-    .contact-footer
+    .contact-footer, .linkedin-footer
         vertical-align: middle
         border-bottom: none
         &:hover, &:active
             background: none
-            padding-left: 10px
         +font-large
 
 /* INTRO */ 

@@ -9,6 +9,24 @@
     +calc('top', "(100% / 3) * #{$top}")
     +calc('left', "(100% / 6) * #{$left}")
 
+@mixin btn($isNegative: false)
+    display: inline-block
+    padding: 18px
+    border: none
+    +font-regular
+    &:hover
+        bottom: 3px
+        right: 3px
+        +single-box-shadow($secondary-colour, 4px, 4px, 0, 0)
+    @if $isNegative
+        background: $secondary-text-colour
+        color: $primary-colour
+    @else
+        background: $primary-colour
+        color: $secondary-text-colour
+    @media #{$small-screen}
+        padding: 10px
+
 @mixin container
     @media #{$large-screen}
         width: $main-width
@@ -26,6 +44,7 @@ body > header, body > footer
 
 .container
     +container
+
 
 body > header
     padding: 20px 0
@@ -78,6 +97,22 @@ body > footer
             width: 35%
         > *
             vertical-align: middle
+        a, a:hover, a:active
+            border: none
+            background: none
+            padding: 0
+            +inline-flex
+        a:after
+            font-size: 0
+            content: attr(title)
+            +inline-flex
+            color: $secondary-text-colour
+            line-height: 50px
+            +single-transition
+        @media (min-width: 720px )
+            a:hover, a:active
+                &:after
+                    font-size: $font-base
     .github-footer
         text-align: right
         width: 50%
@@ -94,8 +129,6 @@ body > footer
     @media #{$x-small-screen}
         .contact-footer
             text-align: center
-            span
-                +font-large(6)
         .github-footer
             text-align: center
             span
@@ -133,11 +166,11 @@ section.intro
         padding: 20px 0
     .container
         display: table
-    .logo-container, .description
+    .logo-container, .description, .scores-container
         display: table-cell
         width: 50%
         vertical-align: middle
-    .logo-container
+    .logo-container, .scores-container
         text-align: center
         @media #{$small-screen}
             width: 35%
@@ -157,11 +190,11 @@ section.intro
         h2
             margin-top: 10px
             text-align: center
-        .logo-container, .description
+        .logo-container, .description, .scores-container
             display: block
         .description
             width: 100%
-        .logo-container
+        .logo-container, .scores-container
             margin: auto
 
 section.skill-html
@@ -268,18 +301,18 @@ section.skill-google
             left: 0
             width: 100%
             height: 100%
-            background: rgba(0,0,0,0.8)
+            background: transparentize($primary-colour, 0.2)
             content: attr(data-title)
             padding-top: 70%
             text-align: center
             opacity: 0
             +font-bold
             +font-large
-        &:hover:after
+        &:hover:after, &.active:after
             opacity: 1
             color: $secondary-text-colour
             padding-top: 30%
-        &:hover:before
+        &:hover:before, &.active:before
             content: attr(data-content)
             color: $secondary-text-colour
             position: absolute
@@ -311,11 +344,132 @@ section.skill-google
             &:hover:after
                 padding-top: 10%
 
+.testimonial
+    blockquote
+        max-width: 915px
+        margin: 100px auto 40px auto
+        p
+            text-align: center
+            +font-huge
+            margin-bottom: 10px
+        footer
+            text-align: right
+
+
 section.career
     background: $primary-colour
     color: $secondary-text-colour
+    text-align: right
+    h2
+        +font-huge
+        margin-top: 0
+        text-align: left
+    p
+        text-align: left
+    .btn.btn-resume
+        +btn(true)
+    @media #{$x-small-screen}
+        text-align: center
 
+section.website
+    h2
+        +font-huge
+        margin-top: 0
+    .description
+        vertical-align: baseline
+        width: 65%
+        @media #{$medium-screen}
+            width: 55%
+        @media #{$small-screen}
+            display: block
+            width: 100%
+        p 
+            max-width: 100%
+    .scores-container
+        text-align: right
+        vertical-align: baseline
+        @media #{$small-screen}
+            display: block
+            width: 100%
+            text-align: center
+    .score
+        margin-bottom: 30px
+        p
+            +font-large(5)
+            margin-bottom: 0
+        &.wife p
+            +font-large
 
+body.contact
+    h2
+        +font-huge
+        text-align: center
+        line-height: 60px
+
+.mail-container
+    margin-top: 80px
+    position: relative
+    width: $mail-w
+    margin: auto
+    &:before
+        content: ""
+        display: block
+        padding-top: 92%
+    .mail
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+    .flap
+        border-bottom: $mail-w / 2.5 solid $secondary-colour
+        border-left: $mail-w / 2 solid transparent
+        border-right: $mail-w / 2 solid transparent
+    .back
+        background: $secondary-colour
+        height: $mail-w / 2
+    .letter
+        background: $tertiary-colour
+        width: $mail-w / 1.2
+        margin: auto
+        position: relative
+        top: - $mail-w / 1.12
+        padding: 15px
+        +single-box-shadow(rgba(0,0,0,0.3), 0, 4px, 5px, 0)
+        *
+            margin: 0
+            padding: 0
+            border: none
+        li
+            list-style: none
+        label
+            display: block
+            margin: 0 0 5px 0
+        input, textarea
+            display: block
+            width: 100%
+            border: none
+            resize: none
+            overflow: auto
+            margin-bottom: 20px
+            padding: 4px
+            &:focus
+                outline-color: $primary-colour
+                outline-style: solid
+                outline-width: 2px
+        textarea
+            height: 85px
+            margin-bottom: 0
+            &:focus
+                z-index: 3
+    .envelope
+        border-top: $mail-w / 3.1 solid transparent
+        border-left: $mail-w / 2 solid $primary-colour
+        border-right: $mail-w / 2 solid $primary-colour
+        padding-bottom: $mail-w / 5.3
+        top: - $mail-w * 1.055
+        position: relative
+        pointer-events: none
 
 
 

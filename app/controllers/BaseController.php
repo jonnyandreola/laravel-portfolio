@@ -7,6 +7,7 @@ class BaseController extends Controller
 		View::Share('css', '/assets/css/');
 		View::Share('img', '/assets/img/');
 		View::Share('js', '/assets/js/');
+		View::Share('file', '/assets/file/');
 	}
 	
 
