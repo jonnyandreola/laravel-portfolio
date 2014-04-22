@@ -3,6 +3,12 @@
     #{$property}: -webkit-calc(#{$expression})
     #{$property}: calc(#{$expression})
 
+@mixin size-and-position($width, $height, $top, $left)
+    +calc('width', "(100% / 6) * #{$width}")
+    +calc('height', "(100% / 3) * #{$height}")
+    +calc('top', "(100% / 3) * #{$top}")
+    +calc('left', "(100% / 6) * #{$left}")
+
 @mixin container
     @media #{$large-screen}
         width: $main-width
@@ -14,14 +20,14 @@
         +calc(width, "100% - 30px")
         margin: 0 15px
 
-header, footer
+body > header, body > footer
     background: $primary-colour
     color: $secondary-text-colour
 
 .container
     +container
 
-header
+body > header
     padding: 20px 0
     overflow: hidden
     @media #{$small-screen}
@@ -59,7 +65,7 @@ header
         li
             display: inline
 
-footer
+body > footer
     padding: 20px 0
     @media #{$small-screen}
         padding: 10px 0
@@ -248,78 +254,66 @@ section.skill-google
         left: 0
         bottom: 0
         right: 0
-        background: $primary-colour
     .each-picture
         position: absolute
-        background: $secondary-colour
         border: 3px solid white
+        overflow: hidden
         img
             max-width: 100%
-        &:after
+        &:after, &:hover:after
             +single-transition
             display: block
             position: absolute
             top: 0
             left: 0
-            content: attr(data-title)
-            width: 100%
-            height: 100%
-            background: rgba(0,0,0,0)
-        &:hover:after
-            display: block
-            position: absolute
-            top: 0
-            left: 0
-            content: attr(data-title)
             width: 100%
             height: 100%
             background: rgba(0,0,0,0.8)
+            content: attr(data-title)
+            padding-top: 70%
+            text-align: center
+            opacity: 0
+            +font-bold
+            +font-large
+        &:hover:after
+            opacity: 1
+            color: $secondary-text-colour
+            padding-top: 30%
+        &:hover:before
+            content: attr(data-content)
+            color: $secondary-text-colour
+            position: absolute
+            text-align: center
+            display: block
+            z-index: 2
+            top: 60%
+            width: 100%
         &.snowboard
-            +calc('width', "(100% / 6) * 2")
-            +calc('height', "(100% / 3) * 2")
-            top: 0
-            left: 0
+            +size-and-position(2, 2, 0, 0)
         &.travel
-            +calc('width', "(100% / 6) * 3")
-            +calc('height', "(100% / 3) * 1")
-            top: 0
-            +calc('left', "(100% / 6) * 2")
+            +size-and-position(3, 1, 0, 2)
+            &:hover:after
+                padding-top: 10%
         &.skateboard
-            +calc('width', "(100% / 6) * 1")
-            +calc('height', "(100% / 3) * 1")
-            top: 0
-            +calc('left', "(100% / 6) * 5")
+            +size-and-position(1, 1, 0, 5)
         &.brazil
-            +calc('width', "(100% / 6) * 1")
-            +calc('height', "(100% / 3) * 1")
-            +calc('top', "(100% / 3) * 1")
-            +calc('left', "(100% / 6) * 2")
+            +size-and-position(1, 1, 1, 2)
         &.love
-            +calc('width', "(100% / 6) * 1")
-            +calc('height', "(100% / 3) * 1")
-            +calc('top', "(100% / 3) * 1")
-            +calc('left', "(100% / 6) * 3")
-            left: 49.99999%
+            +size-and-position(1, 1, 1, 3)
         &.webdesign
-            +calc('width', "(100% / 6) * 2")
-            +calc('height', "(100% / 3) * 2")
-            +calc('top', "(100% / 3) * 1")
-            +calc('left', "(100% / 6) * 4")
+            +size-and-position(2, 2, 1, 4)
         &.bike
-            +calc('width', "(100% / 6) * 1")
-            +calc('height', "(100% / 3) * 1")
-            +calc('top', "(100% / 3) * 2")
-            left: 0
+            +size-and-position(1, 1, 2, 0)
         &.cheese
-            +calc('width', "(100% / 6) * 1")
-            +calc('height', "(100% / 3) * 1")
-            +calc('top', "(100% / 3) * 2")
-            +calc('left', "(100% / 6) * 1")
+            +size-and-position(1, 1, 2, 1)
         &.toronto
-            +calc('width', "(100% / 6) * 2")
-            +calc('height', "(100% / 3) * 1")
-            +calc('top', "(100% / 3) * 2")
-            +calc('left', "(100% / 6) * 2")
+            +size-and-position(2, 1, 2, 2)
+            &:hover:after
+                padding-top: 10%
+
+section.career
+    background: $primary-colour
+    color: $secondary-text-colour
 
 
 

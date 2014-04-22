@@ -67,7 +67,7 @@ a
 
 
 /* HEADER */
-header
+body > header
     a, a:link, a:visited
         text-decoration: none
         color: $secondary-text-colour
@@ -81,16 +81,35 @@ header
                 text-decoration: underline
 
 /*MAIN NAV */
-body.home
-    a.home:link, a.home:visited
-        background: $secondary-colour
-        @media #{$x-small-screen}
-            background: none
-            text-decoration: underline
+body
+    &.home
+        a.home:link, a.home:visited
+            background: $secondary-colour
+            @media #{$x-small-screen}
+                background: none
+                text-decoration: underline
+    &.about
+        a.about:link, a.about:visited
+            background: $secondary-colour
+            @media #{$x-small-screen}
+                background: none
+                text-decoration: underline
+    &.work
+        a.work:link, a.work:visited
+            background: $secondary-colour
+            @media #{$x-small-screen}
+                background: none
+                text-decoration: underline
+    &.contact
+        a.contact:link, a.contact:visited
+            background: $secondary-colour
+            @media #{$x-small-screen}
+                background: none
+                text-decoration: underline
 
 
 /* FOOTER */
-footer
+body > footer
     +negative-link
     .contact-footer
         vertical-align: middle
