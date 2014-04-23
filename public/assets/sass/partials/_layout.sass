@@ -27,6 +27,13 @@
     @media #{$small-screen}
         padding: 10px
 
+@mixin font-responsive($default: 14px)
+    font-size: $default
+    @media #{$medium-screen}
+        font-size: ceil($default * .6)
+    @media #{$small-screen}
+        font-size: ceil($default * .466)
+
 @mixin container
     @media #{$large-screen}
         width: $main-width
@@ -38,9 +45,79 @@
         +calc(width, "100% - 30px")
         margin: 0 15px
 
+@mixin mail($mail-w)
+    margin-top: $mail-w * 0.285
+    position: relative
+    width: $mail-w
+    height: $mail-w 
+    margin: auto
+    .flap
+        border-bottom: $mail-w * 0.4 solid $secondary-colour
+        border-left: $mail-w * 0.5 solid transparent
+        border-right: $mail-w * 0.5 solid transparent
+    .back
+        +background(linear-gradient(color-stops($secondary-colour 30%, darken($secondary-colour, 20%))))
+        height: $mail-w * 0.5
+    .letter
+        background: $tertiary-colour
+        width: $mail-w * 0.9
+        height: $mail-w * 0.906
+        margin: auto
+        position: relative
+        top: - $mail-w * 1.08
+        padding: $mail-w * 0.0525
+        +single-box-shadow(rgba(0,0,0,0.3), 0, 4px, 5px, 0)
+        +single-transition
+        &:hover
+            top: - $mail-w * 1.2
+        *
+            margin: 0
+            padding: 0
+            border: none
+            font-size: $mail-w * .03
+        li
+            list-style: none
+        label
+            display: block
+            margin: 0 0 ($mail-w * 0.017857) 0
+        input, textarea
+            display: block
+            width: 100%
+            border: none
+            resize: none
+            overflow: auto
+            margin-bottom: $mail-w * 0.07142
+            padding: $mail-w * 0.014285
+            &:focus
+                outline-color: $primary-colour
+                outline-style: solid
+                outline-width: $mail-w * 0.00357142857143
+        textarea
+            height: $mail-w * 0.303571
+            margin-bottom: 0
+
+    .envelope
+        border-top: $mail-w * .3225 solid transparent
+        border-left: $mail-w * .5 solid $primary-colour
+        border-right: $mail-w * .5 solid $primary-colour
+        padding-bottom: $mail-w * .19
+        top: - $mail-w * 1.4
+        position: relative
+        pointer-events: none
+    .btn-submit
+        +btn(true)
+        position: relative
+        top: - $mail-w * 1.55
+        display: block
+        margin: auto
+        font-size: $mail-w * .03
+        padding: $mail-w * .025
+
+
 body > header, body > footer
     background: $primary-colour
     color: $secondary-text-colour
+    +border-radius(0)
 
 .container
     +container
@@ -277,6 +354,8 @@ section.skill-google
     margin-top: 80px
     position: relative
     width: 100%
+    @media #{$x-small-screen}
+        margin-top: 0
     &:before
         content: ""
         display: block
@@ -307,7 +386,7 @@ section.skill-google
             text-align: center
             opacity: 0
             +font-bold
-            +font-large
+            +font-responsive(25px)
         &:hover:after, &.active:after
             opacity: 1
             color: $secondary-text-colour
@@ -321,6 +400,7 @@ section.skill-google
             z-index: 2
             top: 60%
             width: 100%
+            +font-responsive(16px)
         &.snowboard
             +size-and-position(2, 2, 0, 0)
         &.travel
@@ -354,6 +434,11 @@ section.skill-google
             margin-bottom: 10px
         footer
             text-align: right
+        @media #{$x-small-screen}
+            margin: 50px auto 40px auto
+            p
+                +font-large
+
 
 
 section.career
@@ -370,6 +455,8 @@ section.career
         +btn(true)
     @media #{$x-small-screen}
         text-align: center
+        h2
+            +font-large
 
 section.website
     h2
@@ -392,6 +479,8 @@ section.website
             display: block
             width: 100%
             text-align: center
+            background: $tertiary-colour
+            padding: 20px
     .score
         margin-bottom: 30px
         p
@@ -399,77 +488,37 @@ section.website
             margin-bottom: 0
         &.wife p
             +font-large
-
+    @media #{$x-small-screen}
+        h2
+            +font-large
+            text-align: left
 body.contact
     h2
         +font-huge
         text-align: center
-        line-height: 60px
+        margin: 60px 0 150px 0
+        @media #{$x-small-screen}
+            +font-large(4)
+            margin: 30px 0 60px 0
+    h2:nth-child(2)
+        margin: 30px 0 30px 0
+
+
 
 .mail-container
-    margin-top: 80px
-    position: relative
-    width: $mail-w
-    margin: auto
-    &:before
-        content: ""
-        display: block
-        padding-top: 92%
-    .mail
-        position: absolute
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-    .flap
-        border-bottom: $mail-w / 2.5 solid $secondary-colour
-        border-left: $mail-w / 2 solid transparent
-        border-right: $mail-w / 2 solid transparent
-    .back
-        background: $secondary-colour
-        height: $mail-w / 2
-    .letter
-        background: $tertiary-colour
-        width: $mail-w / 1.2
-        margin: auto
-        position: relative
-        top: - $mail-w / 1.12
-        padding: 15px
-        +single-box-shadow(rgba(0,0,0,0.3), 0, 4px, 5px, 0)
-        *
-            margin: 0
-            padding: 0
-            border: none
-        li
-            list-style: none
-        label
-            display: block
-            margin: 0 0 5px 0
-        input, textarea
-            display: block
-            width: 100%
-            border: none
-            resize: none
-            overflow: auto
-            margin-bottom: 20px
-            padding: 4px
-            &:focus
-                outline-color: $primary-colour
-                outline-style: solid
-                outline-width: 2px
-        textarea
-            height: 85px
-            margin-bottom: 0
-            &:focus
-                z-index: 3
-    .envelope
-        border-top: $mail-w / 3.1 solid transparent
-        border-left: $mail-w / 2 solid $primary-colour
-        border-right: $mail-w / 2 solid $primary-colour
-        padding-bottom: $mail-w / 5.3
-        top: - $mail-w * 1.055
-        position: relative
-        pointer-events: none
+    +mail(600px)
+    @media #{$small-screen}
+        +mail(530px)
+    @media #{$x-small-screen}
+        +mail(280px)
 
-
-
+.contacts
+    display: inline-block
+    width: 49%
+    text-align: center
+    img
+        width: 30%
+    a:link, a:visited
+        border: none
+    a:hover, a:active
+        background: none

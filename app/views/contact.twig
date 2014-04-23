@@ -7,40 +7,38 @@
 {% block content %}
 <div class="container">
     <h2>Please leave a message after the beep<br/><strong>beep</strong></h2>
-    <div class="mail-container">
-        <div class="mail">
-            <div class="flap"></div>
-            <div class="back"></div>
-            <form action="/contact" method="POST" class="letter">
-                <fieldset>
-                    <ul>
-                        <li>
-                            <label for="form-name">Name</label>
-                            <input id="form-name" name="name" type="text" required/>
-                        </li>
-                        <li>
-                            <label for="form-email">Email</label>
-                            <input id="form-email" name="email" type="email" required/>
-                        </li>
-                        <li>
-                            <label for="form-message">Message</label>
-                            <textarea id="form-message" name="message" row="3" required></textarea>
-                        </li>
-                        
-                    </ul>
-                </fieldset>
-            </form>
-                <div class="envelope"></div>
-                <input class="btn btn-submit" type="submit" value="Send Message"/>
+    <form action="/contact" method="POST" class="mail-container">
+        <div class="flap"></div>
+        <div class="back"></div>
+        <div class="letter">
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="form-name">Name</label>
+                        <input id="form-name" name="name" type="text" required/>
+                    </li>
+                    <li>
+                        <label for="form-email">Email</label>
+                        <input id="form-email" name="email" type="email" required/>
+                    </li>
+                    <li>
+                        <label for="form-message">Message</label>
+                        <textarea id="form-message" name="message" row="3" required></textarea>
+                    </li>
+                    
+                </ul>
+            </fieldset>
         </div>
-    </div>
+        <div class="envelope"></div>
+        <input class="btn btn-submit" type="submit" value="Send Message"/>
+    </form>
     <h2>you can also contact me through</h2>
-    <div class="contact-email">
+    <div class="contacts contact-email">
         <a href="mailto:jonnyandreola@gmail.com" title="jonnyandreola@gmail.com">
             <img src="{{ img }}icon-contact.svg" alt="Envelope Icon"/>
         </a>
     </div>
-    <div class="contact-linkedin">
+    <div class="contacts contact-linkedin">
         <a href="http://www.linkedin.com/in/jonnyandreola" target="_blank" title="www.linkedin.com/in/jonnyandreola">
             <img src="{{ img }}icon-linkedin.svg" alt="LinkedIn Logo"/>
         </a>
