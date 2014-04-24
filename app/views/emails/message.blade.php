@@ -4,6 +4,6 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <p>test</p>
+        <p>{{ $content }}</p>
     </body>
 </html>

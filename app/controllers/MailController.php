@@ -7,7 +7,7 @@ class MailController extends BaseController
     {
         $input = Input::all();
 
-        Mail::send('emails.message', $input, function($message)
+        Mail::send('emails.message', array('content'=>Input::get('message')), function($message)
         {
             $message->to('jonnyandreola@gmail.com', 'John Smith')->subject('Message WEBSITE');
         });
