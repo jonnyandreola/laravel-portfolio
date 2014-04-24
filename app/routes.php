@@ -1,5 +1,6 @@
 <?php
 
-Route::resource('/', 'PagesController@home');
-Route::resource('/about', 'PagesController@about');
-Route::resource('/contact', 'PagesController@contact');
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact');
+Route::post('/contact', 'MailController@sendMail');

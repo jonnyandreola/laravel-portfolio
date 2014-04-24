@@ -5,9 +5,10 @@
 {% block body_class %}contact{% endblock %}
 
 {% block content %}
+{{dump(input)}}
 <div class="container">
     <h2>Please leave a message after the beep<br/><strong>beep</strong></h2>
-    <form action="/contact" method="POST" class="mail-container">
+    {{ form_open()|raw }}
         <div class="flap"></div>
         <div class="back"></div>
         <div class="letter">
@@ -31,7 +32,7 @@
         </div>
         <div class="envelope"></div>
         <input class="btn btn-submit" type="submit" value="Send Message"/>
-    </form>
+    {{ form_close()|raw }}
     <h2 class="second-heading">you can also contact me through</h2>
     <div class="contacts contact-email">
         <a href="mailto:jonnyandreola@gmail.com" title="jonnyandreola@gmail.com">
