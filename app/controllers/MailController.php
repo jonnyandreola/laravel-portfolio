@@ -5,13 +5,14 @@ class MailController extends BaseController
 
     public function sendMail()
     {
-        $input = Input::all();
-
-        Mail::send('emails.message', array('content'=>Input::get('message')), function($message)
+        $msg = nl2br(Input::get('message'));
+        Mail::send('emails.message', array('content'=>Input::all(), 'msg'=>$msg), function($message)
         {
-            $message->to('jonnyandreola@gmail.com', 'John Smith')->subject('Message WEBSITE');
+            $message->from(Input::get('email'), Input::get('name') );
+            $message->to('jonnyandreola@gmail.com', 'Jonny Andreola')->subject('PORTFOLIO CONTACT');
         });
-        return $input;
+
+        return Redirect::to('/contact')->with('sent', true);
     }
 
 }

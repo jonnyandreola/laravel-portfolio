@@ -5,8 +5,7 @@
 {% block body_class %}contact{% endblock %}
 
 {% block content %}
-{{dump(input)}}
-<div class="container">
+<div class="container mail-container{% if sent %} sent{% endif %}">
     <h2>Please leave a message after the beep<br/><strong>beep</strong></h2>
     {{ form_open()|raw }}
         <div class="flap"></div>
@@ -31,7 +30,11 @@
             </fieldset>
         </div>
         <div class="envelope"></div>
+        {% if not sent %}
         <input class="btn btn-submit" type="submit" value="Send Message"/>
+        {% else %}
+        <h2 class="btn-submit">Sent</h2>
+        {% endif %}
     {{ form_close()|raw }}
     <h2 class="second-heading">you can also contact me through</h2>
     <div class="contacts contact-email">
