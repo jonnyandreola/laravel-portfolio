@@ -5,8 +5,94 @@
 {% block body_class %}work{% endblock %}
 
 {% block content %}
-<div class="container temp-message">
-    <h2>Opsy... I will have some work to include here really soon.</h2>
-    <p>I do those fancy things called websites, and my family ask me to fix their computers because I work with computers.</p>
-</div>
+<section class="intro">
+    <div class="container">
+        <div class="intro-message">
+            <h2>I have converted <strong>coffee</strong> into the following things:</h2>
+        </div>
+        <div class="intro-image">
+            <img src="{{ img }}coffee-stain.svg" alt="Image of a coffee ring stain"/>
+        </div>
+    </div>
+</section>
+<section class="projects">
+    <article>
+        <div class="container">
+            <div class="project-content">
+                <h3>Granja Viana Jardins</h3>
+                <p><strong>Role:</strong> Design and Development</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, voluptatem, harum molestiae dolore veritatis sapiente at facilis. Consequatur, molestias, cumque perspiciatis cum tenetur iure in accusantium numquam officiis temporibus iusto.</p>
+                <a class="btn" href="http://www.granjaverdejardins.com.br" target="_blank">granjaverdejardins.com.br</a> 
+            </div>
+            <div class="project-image">
+                 <a href="http://www.jd10.com.br" target="_blank">
+                    <img src="{{ img }}projects/granjaverde-website.jpg" alt="Screenshot of Granja Verde website."/>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="container">
+            <div class="project-image">
+                 <a href="http://www.jd10.com.br" target="_blank">
+                    <img src="{{ img }}projects/jd10-website.jpg" alt="Screenshot of JD 10 website."/>
+                </a>
+            </div>
+            <div class="project-content">
+                <h3>JD 10 Design</h3>
+                <p><strong>Role:</strong> Design and Development</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, voluptatem, harum molestiae dolore veritatis sapiente at facilis. Consequatur, molestias, cumque perspiciatis cum tenetur iure in accusantium numquam officiis temporibus iusto.</p>
+                <a class="btn" href="http://www.jd10.com.br" target="_blank">www.jd10.com.br</a> 
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="container">
+            <div class="project-content">
+                <h3>Clarity</h3>
+                <p><strong>Role:</strong> Design</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, voluptatem, harum molestiae dolore veritatis sapiente at facilis. Consequatur, molestias, cumque perspiciatis cum tenetur iure in accusantium numquam officiis temporibus iusto.</p>
+            </div>
+            <div class="project-image">
+                <img src="{{ img }}projects/clarity-logo.jpg" alt="Clarity's logo image."/>
+            </div>
+        </div>
+    </article>
+
+    <div class="container message">
+        <h2>Best fuel economy in class<br/><strong>23<span>WPG*</span></strong></h2>
+        <span>* websites per gallon of coffee</span>
+    </div>
+
+    <article>
+        <div class="container">
+            <div class="project-content">
+                <h3>Produttore</h3>
+                <p><strong>Role:</strong> Design and Development</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, voluptatem, harum molestiae dolore veritatis sapiente at facilis. Consequatur, molestias, cumque perspiciatis cum tenetur iure in accusantium numquam officiis temporibus iusto.</p>
+                <a class="btn" href="http://www.produttore.com.br/" target="_blank">www.produttore.com.br</a> 
+            </div>
+            <div class="project-image">
+                 <a href="http://www.jd10.com.br" target="_blank">
+                    <img src="{{ img }}projects/produttore-website.jpg" alt="Screenshot of Produttore website."/>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="container">
+            <div class="project-image">
+                 <a href="http://www.jd10.com.br" target="_blank">
+                    <img src="{{ img }}projects/specialalloy-logo.jpg" alt="Special Alloy logo."/>
+                </a>
+            </div>
+            <div class="project-content">
+                <h3>Special Alloy</h3>
+                <p><strong>Role:</strong> Design and Development</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, voluptatem, harum molestiae dolore veritatis sapiente at facilis. Consequatur, molestias, cumque perspiciatis cum tenetur iure in accusantium numquam officiis temporibus iusto.</p>
+            </div>
+        </div>
+    </article>
+</section>
+
 {% endblock %}
