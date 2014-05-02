@@ -145,8 +145,14 @@ body > header, body > footer
 
 
 body > header
+    position: fixed
+    z-index: 10
+    width: 100%
     padding: 20px 0
     overflow: hidden
+    border-bottom: 1px solid white
+    @media #{$x-small-screen}
+        position: static
     @media #{$small-screen}
         padding: 0
     .container
@@ -181,6 +187,13 @@ body > header
                 margin: 8px 0
         li
             display: inline
+
+body > main
+    padding-top: 90px
+    @media #{$small-screen}
+        padding-top: 60px
+    @media #{$small-screen}
+        padding-top: 0
 
 body > footer
     padding: 20px 0
@@ -259,7 +272,7 @@ section.intro
             width: 100%
 
 .skills
-    padding: 100px 0
+    padding: 130px 0
     @media #{$small-screen}
         padding: 20px 0
     .container
@@ -320,7 +333,7 @@ section.skill-jquery
             width: 100%
 
 section.skill-more
-    padding: 30px 0 50px 0
+    padding: 80px 0 110px 0
     background: $primary-colour
     color: $secondary-text-colour
     h2
@@ -352,7 +365,7 @@ section.skill-more
 
 section.skill-google
     background: $tertiary-colour
-    padding: 20px 0
+    padding: 60px 0
     h3
         text-align: center
         margin-bottom: 40px
@@ -370,6 +383,24 @@ section.skill-google
             display: none
         img
             width: 200px
+    .google-search
+        text-align: center
+        input
+            vertical-align: middle
+            height: 60px
+        input[type="text"]
+            border: none
+            +border-radius(15px, 10px 0 0 10px)
+            +single-box-shadow(0,0,0,0)
+            width: 50%
+            padding: 10px
+            +font-large(5)
+            @media #{$small-screen}
+                +font-large(7)
+        input[type="image"]
+            background: $primary-colour
+            padding: 15px 25px
+            +border-radius(15px, 0 10px 10px 0)
 
 .picture-wall-container
     margin-top: 80px
@@ -472,6 +503,7 @@ section.career
         text-align: left
     p
         text-align: left
+        max-width: 750px
     .btn-resume
         +btn(true)
     @media #{$x-small-screen}
@@ -566,6 +598,9 @@ body.work
             margin-bottom: 0
             span
                 +font-large(3)
+            @media #{$small-screen}
+                +font-large
+
 
 section.projects
     article
