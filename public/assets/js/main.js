@@ -8,3 +8,7 @@ $(window).on('scroll resize', function(){
         $('body > header, body > main').removeAttr('style');
     }
 })
+
+$('.each-picture').on('touchstart', function(){
+    $(this).toggleClass('active');
+})
